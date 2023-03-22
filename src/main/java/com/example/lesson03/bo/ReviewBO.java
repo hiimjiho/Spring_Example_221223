@@ -25,7 +25,7 @@ public class ReviewBO {
 	//addReviewAsFiled(4, "콤비네이션R", "삐융", 5.0, "맛있게 잘 먹었습니다");
 	public int addReviewAsFiled(int storeId, String menu, String userName,
 			Double point, String review) {
-		return reviewMapper.insertReview(storeIdlll, menulll, userNamelll, pointlll, reviewlll);
+		return reviewMapper.insertReviewAsFiled(storeId, menu, userName, point, review);
 	}
 	
 }
