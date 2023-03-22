@@ -13,7 +13,8 @@
 			,`review`
 			,`createdAt`
 			,`updatedAt`
-		FROM `new_review`
+		FROM
+		 `new_review`
 		WHERE
 			`id` = #{id}
 	</select>
