@@ -28,4 +28,16 @@ public class ReviewBO {
 		return reviewMapper.insertReviewAsFiled(storeId, menu, userName, point, review);
 	}
 	
+	// input: id, review output: 성공된 행의 개수 int
+	
+	public int updateReviewById(int id, String review) {
+		return reviewMapper.updateReviewById(id, review);
+	}
+	
+	// input: id output:
+	public void deleteReviewById(int id) {
+		reviewMapper.deleteReviewById(id);
+	}
+	
+	
 }
