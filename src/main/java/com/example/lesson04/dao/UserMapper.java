@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserMapper {
-	public int insertUser(
+	public void insertUser(
 			@Param("name") String name,
 			@Param("yyyymmdd") String yyyymmdd,
 			@Param("email") String email,
