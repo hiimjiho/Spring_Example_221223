@@ -10,7 +10,7 @@ public class UserBO {
 	@Autowired 
 	private UserMapper userMapper;
 	
-	public void addUser(String name, String yyyymmdd, String email, String introduce) {
-		userMapper.insertUser(name, yyyymmdd, email, introduce);
+	public String addUser(String name, String yyyymmdd, String email, String introduce) {
+		return userMapper.insertUser(name, yyyymmdd, email, introduce);
 	}
 }
