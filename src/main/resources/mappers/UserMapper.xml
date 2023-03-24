@@ -3,8 +3,8 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
  <mapper namespace="com.example.lesson04.dao.UserMapper">
- 	<insert id="insertUser" parameterType="com.example.lesson04.model.User">
- 		INSERT INTO `user`
+ 	<insert id="insertUser" parameterType="map">
+ 		INSERT INTO `new_user`
  		(
  			 `name`
  			, `yyyymmdd`
@@ -23,4 +23,19 @@
  			,NOW() 
  		)
  	</insert>
+ 	
+ 	<select id="SelectLatestUser" resultType="com.example.lesson04.model.User">
+ 		SELECT
+ 			`id`
+ 			, `name`
+ 			, `yyyymmdd`
+ 			, `email`
+ 			, `introduce`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		FROM
+ 			`new_user`
+ 		ORDER BY `id` DESC
+ 		LIMIT 1
+ 	</select>
  </mapper>
