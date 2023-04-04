@@ -14,5 +14,8 @@ public interface UserMapper {
 			@Param("introduce") String introduce);
 	
 	public User SelectLatestUser();
+	
+	// 0: 거짓	 그외: 참
+	public boolean existUserByName(String name);
 		
 }

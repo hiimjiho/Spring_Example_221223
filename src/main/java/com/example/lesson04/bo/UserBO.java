@@ -20,4 +20,9 @@ public class UserBO {
 	public User getLatestUser() {
 		return userMapper.SelectLatestUser();
 	}
+	
+	// input:name 	output:boolean
+	public boolean existUserByName(String name) {
+		return userMapper.existUserByName(name);
+	}
 }
